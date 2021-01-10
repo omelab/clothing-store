@@ -1,0 +1,328 @@
+openapi: 3.0.0
+x-samples-languages: ['curl', 'node', 'php', 'javascript', 'python']
+info:
+  title: GetCandy
+  contact:
+    name: GetCandy
+    url: 'https://getcandy.io'
+    email: support@getcandy.io
+  version: 1.0.0
+  license:
+    name: MIT
+  description: The GetCandy API
+servers:
+  - url: 'http://localhost:8000/api/v1'
+paths:
+  '/':
+    $ref: './root/paths/root.yaml'
+  '/account/password':
+    $ref: './account/paths/account.password.yaml'
+  '/addresses':
+    $ref: './addresses/paths/addresses.yaml'
+  '/addresses/{addressId}':
+    $ref: './addresses/paths/addresses.id.yaml'
+  '/assets':
+    $ref: './assets/paths/assets.yaml'
+  '/assets/simple':
+    $ref: './assets/paths/assets.simple.yaml'
+  '/assets/{assetId}/detach/{ownerId}':
+    $ref: './assets/paths/assets.id.detach.id.yaml'
+  '/associations/groups':
+    $ref: './associations/paths/associations.groups.yaml'
+  '/attributes':
+    $ref: './attributes/paths/attributes.yaml'
+  '/attributes/order':
+    $ref: './attributes/paths/attributes.order.yaml'
+  '/attributes/{attributeId}':
+    $ref: './attributes/paths/attributes.id.yaml'
+  '/attribute-groups':
+    $ref: './attribute-groups/paths/attribute-groups.yaml'
+  '/attribute-groups/reorder':
+    $ref: './attribute-groups/paths/attribute-groups.reorder.yaml'
+  '/attribute-groups/{attributeGroupId}':
+    $ref: './attribute-groups/paths/attribute-groups.id.yaml'
+  '/baskets':
+    $ref: './baskets/paths/baskets.yaml'
+  '/baskets/{basketId}/meta':
+    $ref: './baskets/paths/baskets.id.meta.yaml'
+  '/baskets/resolve':
+    $ref: './baskets/paths/baskets.resolve.yaml'
+  '/baskets/current':
+    $ref: './baskets/paths/baskets.current.yaml'
+  '/baskets/{basketId}/save':
+    $ref: './baskets/paths/baskets.id.save.yaml'
+  '/baskets/{basketId}/claim':
+    $ref: './baskets/paths/baskets.id.claim.yaml'
+  '/baskets/{basketId}':
+    $ref: './baskets/paths/baskets.id.yaml'
+  '/baskets/saved':
+    $ref: './baskets/paths/baskets.saved.yaml'
+  '/baskets/saved/{basketId}':
+    $ref: './baskets/paths/baskets.saved.id.yaml'
+  '/baskets/{basketId}/discounts':
+    $ref: './baskets/paths/baskets.id.discounts.yaml'
+  '/basket-lines':
+    $ref: './basket-lines/paths/basket-lines.yaml'
+  '/basket-lines/{basketLineId}':
+    $ref: './basket-lines/paths/basket-lines.id.yaml'
+  '/basket-lines/{basketLineId}/add':
+    $ref: './basket-lines/paths/basket-lines.id.add.yaml'
+  '/basket-lines/{basketLineId}/remove':
+    $ref: './basket-lines/paths/basket-lines.id.remove.yaml'
+  '/categories':
+    $ref: './categories/paths/categories.yaml'
+  '/categories/{categoryId}':
+    $ref: './categories/paths/categories.id.yaml'
+  '/categories/{categoryId}/layouts':
+    $ref: './categories/paths/categories.id.layouts.yaml'
+  '/categories/{categoryId}/routes':
+    $ref: './categories/paths/categories.id.routes.yaml'
+  '/categories/parent/{parentId}':
+    $ref: './categories/paths/categories.parent.id.yaml'
+  '/categories/reorder':
+    $ref: './categories/paths/categories.reorder.yaml'
+  '/categories/{categoryId}/products':
+    $ref: './categories/paths/categories.id.products.yaml'
+  '/categories/{categoryId}/channels':
+    $ref: './categories/paths/categories.id.channels.yaml'
+  '/categories/{categoryId}/drafts':
+    $ref: './categories/paths/categories.id.drafts.yaml'
+  '/categories/{categoryId}/customer-groups':
+    $ref: './categories/paths/categories.id.customer-groups.yaml'
+  '/channels':
+    $ref: './channels/paths/channels.yaml'
+  '/channels/{channelId}':
+    $ref: './channels/paths/channels.id.yaml'
+  '/collections/{collectionId}/routes':
+    $ref: './collections/paths/collections.id.routes.yaml'
+  '/collections/{collectionId}/products':
+    $ref: './collections/paths/collections.id.products.yaml'
+  '/collections':
+    $ref: './collections/paths/collections.yaml'
+  '/collections/{collectionId}':
+    $ref: './collections/paths/collections.id.yaml'
+  '/countries':
+    $ref: './countries/paths/countries.yaml'
+  '/countries/{countryId}':
+    $ref: './countries/paths/countries.id.yaml'
+  '/customer-groups':
+    $ref: './customer-groups/paths/customer-groups.yaml'
+  '/customer-groups/{customerGroupId}':
+    $ref: './customer-groups/paths/customer-groups.id.yaml'
+  '/customers':
+    $ref: './customers/paths/customers.yaml'
+  '/customers/fields':
+    $ref: './customers/paths/customers.fields.yaml'
+  '/customers/{customerId}/users':
+    $ref: './customers/paths/customers.id.users.yaml'
+  '/customers/{customerId}/customer-groups':
+    $ref: './customers/paths/customers.id.customer-groups.yaml'
+  '/customers/{customerId}':
+    $ref: './customers/paths/customers.id.yaml'
+  '/discounts':
+    $ref: './discounts/paths/discounts.yaml'
+  '/discounts/{discountId}':
+    $ref: './discounts/paths/discounts.id.yaml'
+  '/languages':
+    $ref: './languages/paths/languages.yaml'
+  '/languages/{languageId}':
+    $ref: './languages/paths/languages.id.yaml'
+  '/layouts':
+    $ref: './layouts/paths/layouts.yaml'
+  '/orders':
+    $ref: './orders/paths/orders.yaml'
+  '/orders/{orderId}':
+    $ref: './orders/paths/orders.id.yaml'
+  '/orders/types':
+    $ref: './orders/paths/orders.types.yaml'
+  '/orders/process':
+    $ref: './orders/paths/orders.process.yaml'
+  '/orders/email-preview/{status}':
+    $ref: './orders/paths/orders.email-preview.status.yaml'
+  '/orders/bulk':
+    $ref: './orders/paths/orders.bulk.yaml'
+  '/orders/{orderId}/expire':
+    $ref: './orders/paths/orders.id.expire.yaml'
+  '/orders/{orderId}/shipping/address':
+    $ref: './orders/paths/orders.id.shipping.address.yaml'
+  '/orders/{orderId}/shipping/methods':
+    $ref: './orders/paths/orders.id.shipping.methods.yaml'
+  '/orders/{orderId}/shipping/cost':
+    $ref: './orders/paths/orders.id.shipping.cost.yaml'
+  '/orders/{orderId}/contact':
+    $ref: './orders/paths/orders.id.contact.yaml'
+  '/orders/{orderId}/billing/address':
+    $ref: './orders/paths/orders.id.billing.address.yaml'
+  '/orders/{orderId}/lines':
+    $ref: './orders/paths/orders.id.lines.yaml'
+  '/orders/lines/{orderLineId}':
+    $ref: './orders/paths/orders.lines.id.yaml'
+  '/orders/{orderId}/invoice':
+    $ref: './orders/paths/orders.id.invoice.yaml'
+  '/payments/{transactionId}/refund':
+    $ref: './payments/paths/payments.id.refund.yaml'
+  '/payments/{transactionId}/void':
+    $ref: './payments/paths/payments.id.void.yaml'
+  '/payments/3d-secure':
+    $ref: './payments/paths/payments.3d-secure.yaml'
+  '/payments/provider':
+    $ref: './payments/paths/payments.provider.yaml'
+  '/payments/types':
+    $ref: './payments/paths/payments.types.yaml'
+  '/product-families':
+    $ref: './product-families/paths/product-families.yaml'
+  '/product-families/{productFamilyId}':
+    $ref: './product-families/paths/product-families.id.yaml'
+  '/products':
+    $ref: './products/paths/products.yaml'
+  '/products/recommended':
+    $ref: './products/paths/products.recommended.yaml'
+  '/products/{productId}':
+    $ref: './products/paths/products.id.yaml'
+  '/products/variants':
+    $ref: './products/paths/products.variants.yaml'
+  '/products/variants/{productVariantId}':
+    $ref: './products/paths/products.variants.id.yaml'
+  '/products/variants/{productVariantId}/inventory':
+    $ref: './products/paths/products.variants.id.inventory.yaml'
+  '/products/{productId}/duplicate':
+    $ref: './products/paths/products.id.duplicate.yaml'
+  '/products/{productId}/urls':
+    $ref: './products/paths/products.id.urls.yaml'
+  '/products/{productId}/redirects':
+    $ref: './products/paths/products.id.redirects.yaml'
+  '/products/{productId}/attributes':
+    $ref: './products/paths/products.id.attributes.yaml'
+  '/products/{productId}/collections':
+    $ref: './products/paths/products.id.collections.yaml'
+  '/products/{productId}/categories':
+    $ref: './products/paths/products.id.categories.yaml'
+  '/products/{productId}/channels':
+    $ref: './products/paths/products.id.channels.yaml'
+  '/products/{productId}/categories/{categoryId}':
+    $ref: './products/paths/products.id.categories.id.yaml'
+  '/products/{productId}/collections/{collectionId}':
+    $ref: './products/paths/products.id.collections.id.yaml'
+  '/products/{productId}/associations':
+    $ref: './products/paths/products.id.associations.yaml'
+  '/products/{productId}/customer-groups':
+    $ref: './products/paths/products.id.customer-groups.yaml'
+  '/products/{productId}/drafts':
+    $ref: './products/paths/products.id.drafts.yaml'
+  '/products/{productId}/publish':
+    $ref: './products/paths/products.id.publish.yaml'
+  '/recycle-bin':
+    $ref: './recycle-bin/paths/recycle-bin.yaml'
+  '/recycle-bin/{itemId}':
+    $ref: './recycle-bin/paths/recycle-bin.id.yaml'
+  '/reports/sales':
+    $ref: './reports/paths/reports.sales.yaml'
+  '/reports/orders':
+    $ref: './reports/paths/reports.orders.yaml'
+  '/reports/orders/customers':
+    $ref: './reports/paths/reports.orders.customers.yaml'
+  '/reports/orders/averages':
+    $ref: './reports/paths/reports.orders.averages.yaml'
+  '/reports/products/best-sellers':
+    $ref: './reports/paths/reports.products.best-sellers.yaml'
+  '/reports/metrics/{subject}':
+    $ref: './reports/paths/reports.metrics.subject.yaml'
+  '/routes':
+    $ref: './routes/paths/routes.yaml'
+  '/routes/{routeId}':
+    $ref: './routes/paths/routes.id.yaml'
+  '/routes/search':
+    $ref: './routes/paths/routes.search.yaml'
+  '/search':
+    $ref: './search/paths/search.yaml'
+  '/saved-searches/product':
+    $ref: './saved-searches/paths/saved-searches.product.yaml'
+  '/saved-searches/{savedSearchId}':
+    $ref: './saved-searches/paths/saved-searches.saved-search-id.yaml'
+  '/settings':
+    $ref: './settings/paths/settings.yaml'
+  '/settings/{handle}':
+    $ref: './settings/paths/settings.handle.yaml'
+  '/shipping':
+    $ref: './shipping/paths/shipping.yaml'
+  '/shipping/{shippingMethodId}':
+    $ref: './shipping/paths/shipping.id.yaml'
+  '/shipping/zones':
+    $ref: './shipping/paths/shipping.zones.yaml'
+  '/shipping/zones/{shippingZoneId}':
+    $ref: './shipping/paths/shipping.zones.id.yaml'
+  '/shipping/{shippingMethodId}/prices':
+    $ref: './shipping/paths/shipping.id.prices.yaml'
+  '/shipping/prices/{shippingPriceId}':
+    $ref: './shipping/paths/shipping.prices.id.yaml'
+  '/shipping/{shippingMethodId}/zones':
+    $ref: './shipping/paths/shipping.id.zones.yaml'
+  '/shipping/{id}/users':
+    $ref: './shipping/paths/shipping.id.users.yaml'
+  '/tags':
+    $ref: './tags/paths/tags.yaml'
+  '/tags/{tagId}':
+    $ref: './tags/paths/tags.id.yaml'
+  '/taxes':
+    $ref: './taxes/paths/taxes.yaml'
+  '/taxes/{taxId}':
+    $ref: './taxes/paths/taxes.id.yaml'
+  '/users':
+    $ref: './users/paths/users.yaml'
+  '/users/{userId}':
+    $ref: './users/paths/users.id.yaml'
+  '/users/fields':
+    $ref: './users/paths/users.fields.yaml'
+  '/users/current':
+    $ref: './users/paths/users.current.yaml'
+  '/versions/{modelId}/restore':
+    $ref: './versions/paths/versions.id.restore.yaml'
+components:
+  securitySchemes:
+    auth:
+      type: oauth2
+      flows:
+        password:
+          tokenUrl: 'http://localhost:3000/api/v1/oauth/token'
+          refreshUrl: 'http://localhost:3000/api/v1/oauth/refresh'
+          scopes: {}
+        clientCredentials:
+          tokenUrl: 'http://localhost:3000/api/v1/oauth/token'
+          scopes: {}
+          refreshUrl: 'http://localhost:3000/api/v1/oauth/refresh'
+      description: ''
+tags:
+  - name: Channels
+    description: Store channels
+  - name: Categories
+    description: Catalogue Management
+  - name: Authentication
+    description: Everything to authenticate requests
+  - name: Orders
+    description: Order Processing
+  - name: Attributes
+    description: Catalogue Management
+  - name: Assets
+    description: Catalogue Management
+  - name: Associations
+    description: Catalogue Management
+  - name: Baskets
+    description: Order Processing
+  - name: Payments
+    description: Order Processing
+  - name: Collections
+    description: Catalogue Management
+  - name: Customers
+    description: Order Processing
+  - name: Discounts
+    description: Order Processing
+  - name: Languages
+    description: System Settings
+  - name: Layouts
+    description: Catalogue Management
+  - name: Products
+    description: Catalogue Management
+  - name: Product Variants
+    description: Catalogue Management
+  - name: Taxes
+    description: System Settings

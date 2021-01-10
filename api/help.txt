@@ -1,7 +1,10 @@
-//installation help
+//installation and doc help
 -- https://api-docs.getcandy.io/
+-- https://getcandy-api.readme.io/reference
+
 
 //extra
 -- https://www.codecheef.org/article/laravel-6-rest-api-development-with-ecommerce-project
 -- https://medium.com/@Dotunj/building-a-rest-api-with-lumen-403b67fec4d6
 -- https://www.cloudways.com/blog/creating-rest-api-with-lumen/
+-- https://github.com/vimeo/laravel

@@ -1,0 +1,31 @@
+parameters:
+  - schema:
+      type: string
+    name: customerId
+    in: path
+    required: true
+put:
+  summary: Attach customer groups to a customer
+  responses:
+    '200':
+      description: OK
+      content:
+        application/json:
+          schema:
+            $ref: '../responses/CustomerResponse.yaml'
+    '404':
+      description: Not Found
+      content:
+        application/json:
+          schema:
+            $ref: '../../global/responses/ApiError.yaml'
+  operationId: post-customers-customerId-customer-groups
+  description: ''
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../requests/AttachCustomerToGroupBody.yaml'
+        examples: {}
+  tags:
+    - Customers
