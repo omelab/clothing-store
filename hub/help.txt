@@ -1,0 +1,2 @@
+//install help
+- https://hub-docs.getcandy.io/getting-started/installation
